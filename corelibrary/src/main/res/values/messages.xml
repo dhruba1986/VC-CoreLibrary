@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_error_default">Oops! something went wrong.</string>
+    <string name="message_error_no_internet">Not able to connect to Vantage Circle. Please check your network connection and try again.</string>
+    <string name="message_error_time_out">You are connected to a very slow network or no internet. Please try again.</string>
+</resources>
