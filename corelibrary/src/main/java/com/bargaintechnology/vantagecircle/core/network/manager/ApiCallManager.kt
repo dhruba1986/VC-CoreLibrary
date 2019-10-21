@@ -8,13 +8,13 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-open class NetworkCallManager {
+open class ApiCallManager {
 
     private val uiHandler = Handler(Looper.getMainLooper())
 
-    fun makeRetrofitApiCall(objectCall: Call<Any>, TAG: String, apiListener: ApiContract.ApiListener) {
+    fun apiCall(objectCall: Call<Any>?, TAG: String, apiListener: ApiContract.ApiListener) {
 
-        objectCall.enqueue(object : Callback<Any> {
+        objectCall?.enqueue(object : Callback<Any> {
             override fun onResponse(call: Call<Any>, response: Response<Any>) {
                 uiHandler.post {
                     if (response.code() == 200 && response.body() != null) {

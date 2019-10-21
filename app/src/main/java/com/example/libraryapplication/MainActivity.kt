@@ -9,9 +9,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bargaintechnology.vantagecircle.core.BuildFlavour
 import com.bargaintechnology.vantagecircle.core.VantageCircle
-import com.bargaintechnology.vantagecircle.core.network.manager.NetworkCallManager
-import com.bargaintechnology.vantagecirclr.giftcard.apiService.RestApiService
-import com.bargaintechnology.vantagecirclr.giftcard.model.GiftCardModel
+import com.bargaintechnology.vantagecirclr.giftcard.initializer.GiftCard
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,8 +29,8 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        VantageCircle(this.application, "", BuildFlavour.TEST)
-
+        VantageCircle(this.application, "60d9369d-58c7-4c3c-bee1-69c459ba6133", BuildFlavour.TEST)
+        GiftCard.getGiftCard()
     }
 
 }
