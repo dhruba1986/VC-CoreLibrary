@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         VantageCircle(this.application, "60d9369d-58c7-4c3c-bee1-69c459ba6133", BuildFlavour.TEST)
-        GiftCard.getGiftCard()
+        GiftCard.getAllGiftCard("Gift Card")
     }
 
 }
